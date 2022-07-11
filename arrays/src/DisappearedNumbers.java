@@ -40,7 +40,7 @@ public class DisappearedNumbers {
 */
 
 
-        public static List<Integer> findDisappearedNumbers(int[] nums) {// time complexity O(n)
+       /* public static List<Integer> findDisappearedNumbers(int[] nums) {// time complexity O(n)
             // space complexity O(1) if considering returned list does not count as additional space
             // here we mark the index value by multiplying with -1, use this to find unmarked index.
             ArrayList<Integer> result  = new ArrayList<>();
@@ -61,7 +61,22 @@ public class DisappearedNumbers {
             else
                 x = -i;
             return x;
+        } */
+    public static List<Integer> findDisappearedNumbers(int[] nums) { // time complexity O(n) // space complexity O(n)
+        int[] dup = new int[nums.length];
+        for(int i = 0; i < nums.length; i++){
+            dup[i] = i + 1;
         }
+        ArrayList<Integer> result  = new ArrayList<>();
+        for(int i = 0; i < nums.length; i++){
+            dup[nums[i] - 1] = 0;
+        }
+        for(int i = 0; i < nums.length; i++){
+            if(dup[i] != 0)
+                result.add(dup[i]);
+        }
+        return result;
+    }
 
     public static void main(String[] args){
         int[] nums = {1,2,2,3,4,5,5};
