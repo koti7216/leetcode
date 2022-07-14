@@ -1,2 +1,3 @@
 # leetcode
-java solutions
+Leetcode a day is good for coding 
+
