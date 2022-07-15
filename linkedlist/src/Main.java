@@ -4,7 +4,7 @@ public class Main {
         myLinkedList.addAtHead(1);
 
 
-        while (myLinkedList.head != null) {
+        while (myLinkedList.head  != null) {
             System.out.println(myLinkedList.head.val);
             myLinkedList.head = myLinkedList.head.next;
         }
