@@ -28,7 +28,7 @@ public class findMaxConsecutiveONEs {
                         h = m;
                         m = 0;
                     }
-                    if(i != nums.length - 1 && nums[i] == 0 && nums[i + 1] == 0){
+                    if(i != 0 && nums[i] == 0 && nums[i - 1] == 0){
                         h = 0;
                     }
                 }
@@ -36,7 +36,7 @@ public class findMaxConsecutiveONEs {
             return max;
         }
     public static void main( String[] args){
-            int[] nums = {1,0,1,1,1,0};
+            int[] nums = {1,0,1,1,0,0,1};
             System.out.print(findMaxConsecutiveOnes(nums));
     }
 }

@@ -10,7 +10,7 @@ public class DiagonalOrderOfMatrix { // returns the diagonal order of the given 
         result[0] = mat[0][0];
         for(int t = 1; t <= m + n - 2; t++){
             if(t % 2 == 1){
-                for(int i = 0; i <= m - 1; i++){
+                for(int i = 0; i < m; i++){
                     j = t - i;
                     if(j <= n - 1 && j >= 0){
                         result[c] = mat[i][j];
@@ -20,7 +20,6 @@ public class DiagonalOrderOfMatrix { // returns the diagonal order of the given 
             }
             if(t % 2 == 0){
                 for(int i = m - 1; i >= 0; i--){
-
                     j = t - i;
                     if(j <= n - 1 && j >= 0){
                         result[c] = mat[i][j];

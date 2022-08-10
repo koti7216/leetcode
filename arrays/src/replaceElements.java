@@ -28,7 +28,7 @@ public class replaceElements {
         else{
         for(int i = arr.length - 2; i >= 0; i--){
             int m = arr[i];
-             max = Math.max(max,arr[i+1]);
+            max = Math.max(max,arr[i+1]);
             arr[i] = max;
             max = m;
         }
