@@ -1,6 +1,6 @@
 public class RotataeByKplaces {
     //Given the head of a linked list, rotate the list to the right by k places.
-        public static ListNode rotateRight(ListNode head, int k) {
+        /*public static ListNode rotateRight(ListNode head, int k) {
             // O(N) time complexity and space complexity is O(1)
             if(head == null || head.next == null)
                 return head;
@@ -42,7 +42,30 @@ public class RotataeByKplaces {
                 }
             }
             return head;
+        }*/
+    public static ListNode rotateRight(ListNode head, int k){
+        if(head == null)
+            return head;
+        ListNode cur = head;
+        int length = 1;
+        while(cur.next != null){
+            cur = cur.next;
+            length++;
         }
+        while(k > length)
+            k = k % length;
+        if(k == length)
+            return head;
+        else{
+            ListNode temp = head;
+            for(int i = 1; i < length-k; i++)
+                temp = temp.next;
+            cur.next = head;
+            head = temp.next;
+            temp.next = null;
+        }
+        return head;
+    }
 
 
     public static void main(String[] args) {
