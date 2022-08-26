@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Arrays1/Arrays1.iml" filepath="$PROJECT_DIR$/Arrays1/Arrays1.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedList1/LinkedList1.iml" filepath="$PROJECT_DIR$/LinkedList1/LinkedList1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Queue/Queue.iml" filepath="$PROJECT_DIR$/Queue/Queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
       <module fileurl="file://$PROJECT_DIR$/arrays/arrays.iml" filepath="$PROJECT_DIR$/arrays/arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/leetcode.iml" filepath="$PROJECT_DIR$/.idea/leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkedlist/linkedlist.iml" filepath="$PROJECT_DIR$/linkedlist/linkedlist.iml" />
