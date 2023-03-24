@@ -26,7 +26,7 @@ class Node {
 }
 
 
-    class Solution {
+   /* class Solution {
         HashMap<Node,Node> h = new HashMap<>();
         public Node cloneGraph(Node node) {
             if(node == null)
@@ -41,5 +41,21 @@ class Node {
 
             return cn;
         }
-    }
+    }*/
+   class Solution {
+       Node h[] = new Node[101];
+       public Node cloneGraph(Node node) {
+           if(node == null)
+               return null;
+           if(h[node.val]!=null)
+               return h[node.val];
+
+           Node cn = new Node(node.val,new ArrayList<>());
+           h[cn.val]=cn;
+           for(Node n:node.neighbors){
+               cn.neighbors.add(cloneGraph(n));}
+
+           return cn;
+       }
+   }
 }
