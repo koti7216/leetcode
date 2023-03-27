@@ -11,6 +11,8 @@ public class AllPathsStoD {
 
         }
         public static boolean dfs(HashMap<Integer,ArrayList<Integer>> h, int s, int d, int node,int[] path){
+            System.out.println("---------");
+            System.out.println(node);
             if(path[node]!=0){
                  return path[node]==2;
             }
@@ -19,21 +21,27 @@ public class AllPathsStoD {
                 if(node!=d)
                     return node==d;
             }
+            else{
 
             path[node]=1;
 
+     //       System.out.println(Arrays.toString(path));
                 for(int i=0;i<arr.size();i++){
                     if(!dfs(h,s,d,arr.get(i),path))
                         return false;
-                }
-            path[node]=2;
+               //     System.out.println(Arrays.toString(path));
+                //  path[node]=2;
+                 //   System.out.println(Arrays.toString(path));
+                }}
+             path[node]=2;
+            System.out.println(Arrays.toString(path));
             return true;
 
         }
 
 
     public static void main(String[] args) {
-        int[][] e = {{0,1},{0,3},{1,2},{2,1}};
-        System.out.println(leadsToDestination(4,e,0,3));
+        int[][] e = {{0,1},{0,2},{2,1},{1,3},{2,3},{3,4}};
+        System.out.println(leadsToDestination(5,e,0,4));
     }
 }
