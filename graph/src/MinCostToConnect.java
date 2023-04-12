@@ -16,20 +16,23 @@ public class MinCostToConnect {
             }
             Collections.sort(a,Comparator.comparing((c)->c.get(2)));
             Node n = new Node(s);
-            int[] d = new int[s];
+            int result = 0;
+            //int[] d = new int[s];
             int t4 = 0;
             for(ArrayList<Integer> f: a){
                 if(!n.connected(f.get(0), f.get(1))){
-                    int t1 = d[n.find(f.get(0))];
-                    int t2 = d[n.find(f.get(1))];
+                    // int t1 = d[n.find(f.get(0))];
+                    //int t2 = d[n.find(f.get(1))];
                     n.union(f.get(0),f.get(1));
-                    d[n.find(f.get(0))] = t1+t2+f.get(2);
+                    // d[n.find(f.get(0))] = t1+t2+f.get(2);
+                    result += f.get(2);
                     t4++;
                     if(t4 == s-1)
                         break;
                 }
             }
-            return d[n.find(0)];
+            // return d[n.find(0)];
+            return result;
         }
         class Node{
             private int[] node;
